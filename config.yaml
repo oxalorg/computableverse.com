@@ -13,7 +13,13 @@ taxonomies:
     category: "categories"
 
 params:
-    keywords: ["default", "keywords", "if", "no", "front", "matter"]
+    keywords:
+        - computer
+        - developer
+        - programming
+        - blog
+        - mitesh shah
+        - multiverse
     description: "A description that will appear as a default if front matter does not exist"
     author: Mitesh Shah
     author_link: http://miteshshah.com
