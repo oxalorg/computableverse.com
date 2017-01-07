@@ -1,0 +1,10 @@
+{{ $author := .Params.author | default .Site.Params.author }}
+{{ $author_link := .Params.author_link | default .Site.Params.author_link }}
+<small>
+    Posted on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    by <a href="{{ $author_link }}">{{ $author }}</a>
+    {{ if isset .Params "tags" }}
+        {{ $tagCount := .Params.tags | len }}
+        in <span>{{ range $index, $value := .Params.tags }}<a href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ $value }}</a>{{ if lt (add $index 1) $tagCount }}, {{ end }}{{ end }}</span>
+    {{ end }}
+</small>

@@ -1,0 +1,5 @@
+<ul class="tags">
+    {{ range .Params.tags }}
+        <li><a href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+    {{ end }}
+</ul>

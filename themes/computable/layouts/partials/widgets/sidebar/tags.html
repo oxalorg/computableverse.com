@@ -1,0 +1,10 @@
+{{ with .Site.Taxonomies.tags }}
+<section>
+    <h2>Tags</h2>
+    <p class="tag-cloud">
+        {{ range .ByCount }}
+            <a href="{{ $.Site.BaseURL}}/tags/{{ .Name | urlize }}">{{ .Name }} ({{ .Count }})</a>
+        {{ end }}
+    </p>
+</section>
+{{ end }}

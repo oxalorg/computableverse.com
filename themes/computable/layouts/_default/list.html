@@ -1,0 +1,12 @@
+{{ define "content" }}
+{{ range .Data.Pages.GroupByDate "2006" }}
+<h1>{{ .Key }}</h1>
+<ul>
+    {{ range .Pages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a> - <span class="meta"><small><em>{{ .Date.Format "Jan 2" }}</small></em></span>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+{{ end }}

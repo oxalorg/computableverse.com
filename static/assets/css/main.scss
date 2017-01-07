@@ -1,0 +1,45 @@
+---
+# The scss file which include files from _sass/
+---
+
+@charset "utf-8";
+
+$base-font-family: Merriweather, Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  1.25;
+$base-line-height: 1.5;
+
+$text-color: #333;
+// $link-color: #0074d9; // Dense Blue
+//$link-color: #4B84B5; // Less dense yet darkish
+$link-color: #716DA2;
+$meta-color: #a0a0a0;
+$border-color: #ddd;
+$border-radius-base: 0.4rem;
+
+// Code variables
+$code-font-family: "Inconsolata-g";
+$code-bg: #eef; // In accordance with _syntax
+$code-color: $link-color;
+
+// $font-mono: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-mono: $code-font-family;
+$font-path-file-name: {{ baseurl }}/assets/fonts/inconsolata-g-webfont;
+
+// Inconsolata-g font
+@font-face {
+  font-family: $code-font-family;
+  src: url($font-path-file-name+'.eot'); /* IE9 Compat Modes */
+  src: url($font-path-file-name+'.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font-path-file-name+'.woff2') format('woff2'), /* Super Modern Browsers */
+       url($font-path-file-name+'.woff') format('woff'), /* Pretty Modern Browsers */
+       url($font-path-file-name+'.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url($font-path-file-name+'.svg#Inconsolata-g') format('svg'); /* Legacy iOS */
+}
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
+@import "color";
+@import "base";
+@import "layout";
+@import "syntax";
+@import "custom";

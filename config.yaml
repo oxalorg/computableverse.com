@@ -1,0 +1,35 @@
+baseURL: http://computableverse.com
+metaDataFormat: yaml
+languageCode: en-us
+title: Computable(verse)
+theme: computable
+
+
+permalinks:
+    page: /:slug/
+
+taxonomies:
+    tag: "tags"
+    category: "categories"
+
+params:
+    keywords: ["default", "keywords", "if", "no", "front", "matter"]
+    description: "A description that will appear as a default if front matter does not exist"
+    author: Mitesh Shah
+    author_link: http://miteshshah.com
+    social:
+        github: oxalorg
+        twitter: oxalorg
+        twitter_domain: "computableverse.com"
+        facebook_admin: 100000855963383
+
+googleAnalytics: "UA-61533153-1"
+disqusShortname: "computableverse"
+
+menu:
+    headers:
+        - name: archive
+          url: /blog/
+        - name: about
+          url: /about/
+...

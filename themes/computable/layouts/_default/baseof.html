@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . "," }}{{ else }}{{ delimit .Site.Params.keywords "," }}{{ end }}' />
+    {{ with .Params.author }}
+        <meta name="author" content="{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.favicon }}
+        <link rel="icon" type="image/png" href="{{ . }}" sizes="196x196" />
+    {{ end }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css" />
+    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/vader.css" /> -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/computable.css" />
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/google_news.html" . }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+</head>
+<body>
+    <header class="site-header">
+        <a href="/"><h1 style="margin-bottom: 0px;">{{ .Site.Title }} {</h1></a>
+        <p style="margin-top: 5px;" class="meta">/* <a href="/about/">about</a> | <a href="/blog/">archive</a> */
+        </p>
+    <header>
+    <section class="site-main">
+        <section class="content">
+            {{ block "content" . }}
+            {{ end }}
+        </section>
+        <aside>
+            {{ partial "widgets/sidebar/search.html" . }}
+            {{ partial "widgets/sidebar/recent.html" . }}
+            {{ partial "widgets/sidebar/adsense.html" . }}
+            {{ partial "widgets/sidebar/tags.html" . }}
+            {{ partial "widgets/sidebar/donate.html" . }}
+        </aside>
+    </section>
+    <footer class="site-footer">
+        <h1>}</h1> 
+    </footer>
+    {{ template "_internal/google_analytics.html" . }}
+</body>
+</html>

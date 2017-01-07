@@ -1,0 +1,106 @@
+/* Site */
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.52;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    max-width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    /* color: #6a6d73; */
+    color: #256abb;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+a:hover {
+    border-bottom: 1px solid #5c5c5c;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+}
+
+ul li, ol li {
+    margin-bottom: 0.67em;
+}
+
+pre {
+    padding: 1em;
+    /* background-color: #dedede; */
+    background-color: #eef;
+    color: #49585c;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #eef;
+    padding: 0 0.3em;
+}
+
+pre > code {
+    padding: 0;
+    font-size: 0.9em;
+}
+/* ContentLayout */
+
+.site-main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.site-main .content {
+    float: left;
+    padding-right: 20px;
+    width: 68.33%;
+    font-size: 1.1rem;
+}
+
+.site-main aside {
+    float: left;
+    width: 31.66%;
+    font-size: 1rem;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .site-main .content, .site-main aside {
+        width: 100%;
+    }
+}
+
+/* Specifics */
+
+ul.tags {
+    list-style: none;
+}
+
+ul.tags li {
+    display: inline;
+}
+
+.meta {
+    color: #5c5c5c;
+}
+
+.tag-cloud a {
+    display:inline-block; 
+    padding:2px;
+}

@@ -1,0 +1,14 @@
+{{ define "content" }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+{{ range $paginator.Pages }}
+<article class="post">
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <p class="meta"> {{ partial "post_meta.html" . }} </p>
+    {{ .Summary }}
+    <a href="{{ .Permalink }}" role="button">Read More...</a>
+</article>
+<hr>
+{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}
+

@@ -1,0 +1,10 @@
+{{ define "content" }}
+<article class="post">
+<h1>{{ .Title }}</h1>
+<p class="meta"> {{ partial "post_meta.html" . }} </p>
+<!-- {{ partial "widgets/content/share.html" . }} -->
+{{ .Content }}
+</article>
+{{ template "_internal/disqus.html" . }}
+{{ end }}
+
