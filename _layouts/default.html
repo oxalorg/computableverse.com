@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ============================================================================================-->
+<!-- **psstt** This is a secret page. You're not supposed to see this code! -->
+<!-- Go away! Last Warning! -->
+<!-- DAMN! You're a badass. -->
+<!-- Using minimal css framework: http://github.com/miteshninja/sakura -->
+<!-- ============================================================================================-->
+<head>
+    <!-- Config -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Information -->
+    {% comment %} <title>{{ page.title }}</title> {% endcomment %}
+    {% seo %}
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/sakura.css" async>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css" async>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+    <header id="site-header">
+      <nav id="site-nav">
+        <ul>
+          <li><strong><a href="{{ site.baseurl }}/" class="sakura-blossom no-border fancy-font" id="site-name">{{ site.brand_name }}</a></strong></li>
+          <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/wisdom/">wisdom</a></small></li>
+          <!-- <li><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/about/">about</a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer id="site-footer">
+      <ul>
+        <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/about/">about</a></small></li>
+        <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/rss/">rss</a></small></li>
+      </ul>
+    </footer>
+    {% include analytics.html %}
+</body>
+</html>

@@ -1,0 +1,137 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
+
+html {
+    background-image: url('../img/background.png')
+}
+
+body { 
+    padding-top: 20px;
+    font-family: Merriweather, Helvetica, Arial, sans-serif;
+    background-color: rgba(0,0,0,0.0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, Helvetica, Arial, sans-serif;
+}
+
+a {
+    border-bottom: 1px solid #4a4a4a;
+}
+
+@font-face {
+    font-family: fancyRoman;
+    src: url('../fonts/Roman_SD.ttf');
+}
+
+.fancy-font {
+    font-family: fancyRoman;
+}
+
+.pull-right {
+    float: right;
+}
+
+#site-header {
+    overflow: hidden;
+}
+
+#site-header h1 {
+    font-size: 1.5em;
+    font-family: fancyRoman;
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    bottom: -5px;
+}
+
+#site-header nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#site-header nav ul li:first-child {
+    float: left;
+}
+
+#site-header nav ul li {
+    display: inline-block;
+    float: right;
+}
+
+#site-footer {
+    margin-top: 25px;
+}
+
+#site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#site-footer ul li {
+    display: inline-block;
+}
+
+#home-post-header {
+    border-bottom: 0px;
+}
+
+/*------------------------------*/
+.profile-icon-wrapper {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.profile-icons {
+    text-align: center;
+}
+
+.profile-icons > a {
+    border: 0;
+}
+
+.profile-icons > a:hover {
+    border: 0;
+}
+
+/*============================*/
+/*Helper classes*/
+/*============================*/
+
+.no-border {
+    border: 0;
+}
+
+.no-border:hover {
+    border: 0;
+}
+
+.no-list-style {
+    list-style: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Chronological post table */
+.chrono {
+    display: table;
+    width: 100%;
+}
+
+.chrono a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.chrono .go-left {
+    float: left;
+    text-align: left;
+}
+
+.chrono .go-right {
+    float: right;
+    text-align: right;
+}
