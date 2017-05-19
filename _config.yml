@@ -69,6 +69,9 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+include: 
+    - "_redirects"
+
 gems:
     - jekyll-sitemap
     - jekyll-feed
