@@ -75,6 +75,14 @@ a {
     border-bottom: 0px;
 }
 
+.post-title {
+    margin-bottom: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
 /*------------------------------*/
 .profile-icon-wrapper {
     margin-top: 1em;

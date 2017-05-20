@@ -1,0 +1,10 @@
+<aside>
+  <nav class="">
+    {% for p in site.posts offset:1 limit:1 %}
+      {% if p %}
+        <h4 class="text-center"><a class="sakura-fade no-border" href="{{p.url}}">{{p.title}} &raquo;</a></h4>
+      {% endif %}
+    {% endfor %}
+  </nav>
+  <div style="clear: both;"></div>
+</aside>

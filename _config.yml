@@ -48,8 +48,8 @@ defaults:
 
 # Third-party services
 # just leave empty to disable it
-google_analytics:
-disqus_shortname:
+google_analytics: UA-99601612-1
+disqus_shortname: owlofathena
 twitter:
     username: oxalorg
 
@@ -71,6 +71,8 @@ footer-links:
 
 include: 
     - "_redirects"
+
+excerpt_separator: <!--more-->
 
 gems:
     - jekyll-sitemap

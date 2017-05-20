@@ -7,21 +7,8 @@ layout: default
     <header>
         <h1><a id="home-post-header" href="{{ post.url }}">{{ post.title }}</a></h1>
     </header>
-    {{ post.content }}
-    <footer>
-        <small><em>
-            <address>Posted by {{ post.author }}</address>
-            <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
-        </em></small>
-    </footer>
+    {{ post.excerpt }}
+    <br>
+    <h4 class="text-center"><a class="sakura-fade no-border" href="{{post.url}}">Continue reading.. &raquo;</a></h4>
+    {% comment %} <h4 class="text-center"><a class="no-border fancy-font" href="/wisdom">View all posts...</a></h4> {% endcomment %}
 </article>
-<aside>
-  <nav class="chrono">
-    {% for p in site.posts offset:1 limit:1 %}
-      {% if p %}
-        <a class="go-right sakura-fade no-border" href="{{p.url}}">{{p.title}} &raquo;</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
-  <div style="clear: both;"></div>
-</aside>
