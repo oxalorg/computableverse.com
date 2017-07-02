@@ -21,7 +21,7 @@ title: "Blog All posts"
         {% endif %}
     {% endif %}
                 <li style="padding-bottom:7px;">
-                    <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block">-{{ post.date | date: '%d %b' }}</span></em></small>
+                    <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
                 </li>
     {% if forloop.last %}
             </ul>

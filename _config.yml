@@ -13,14 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Owl of Athena
+title: ComputableVerse
 email: mitesh@oxal.org
 description: > # this means to ignore newlines until "baseurl:"
-  "Just like the owl of athena, our thirst for knowledge is evergrowing.
-  This is a collection of philosophies of the world and it's beings."
+  "A collection of the problems I face related to software and the computable multi-verse."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-brand_name: Owl Of Athena
+brand_name: ComputableVerse
 
 # Build settings
 markdown: kramdown
@@ -29,7 +28,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-permalink: /wisdom/:title
+permalink: /blog/:title
 sakura-jekyll-version: 0.9.0
 author:
     twitter: oxalorg
@@ -48,10 +47,17 @@ defaults:
 
 # Third-party services
 # just leave empty to disable it
-google_analytics: UA-99601612-1
-disqus_shortname: owlofathena
+google_analytics: UA-61533153-1
+disqus_shortname: computableverse
 twitter:
     username: oxalorg
+
+social:
+    github: oxalorg
+    twitter: oxalorg
+    twitter_domain: "computableverse.com"
+    facebook_admin: 100000855963383
+
 
 # Includes an icon in the 'ABOUT' page for each username you enter
 footer-links:
@@ -69,8 +75,8 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
-include: 
-    - "_redirects"
+# include: 
+#     - "_redirects"
 
 excerpt_separator: <!--more-->
 

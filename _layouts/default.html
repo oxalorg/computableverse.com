@@ -10,6 +10,7 @@
     <!-- Config -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content='computer,developer,programming,blog,mitesh shah,multiverse' />
 
     <!-- Information -->
     {% comment %} <title>{{ page.title }}</title> {% endcomment %}
@@ -24,22 +25,21 @@
 </head>
 
 <body>
-    <header id="site-header">
-      <nav id="site-nav">
-        <ul>
-          <li><strong><a href="{{ site.baseurl }}/" class="sakura-blossom no-border fancy-font" id="site-name">{{ site.brand_name }}</a></strong></li>
-          <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/wisdom/">wisdom</a></small></li>
-          <!-- <li><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/about/">about</a></li> -->
-        </ul>
-      </nav>
+    <header class="site-header">
+        <h1 class="site-title"><!--em>func</em--> <a href="/" class="no-border fancy-font">computable<span class="meta">(</span><em>verse</em><span class="meta">)</span></a> {</h1>
+        <p class="meta fancy-font">/* <a href="/about/">about</a> | <a href="/blog/">archive</a> */
+        </p>
     </header>
-    <main>
-        {{ content }}
-    </main>
+    <section class="site-main">
+        <section class="content">
+          {{ content }}
+        </section>
+    </section>
+    <footer class="site-footer">
+        <h1>}</h1> 
+    </footer>
     <footer id="site-footer">
       <ul>
-        <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/about/">about</a></small></li>
-        <li><small> - </small></li>
         <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/feed.xml">rss</a></small></li>
       </ul>
     </footer>

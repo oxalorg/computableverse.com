@@ -2,13 +2,30 @@
 layout: default
 ---
 
-{% assign post = site.posts.first %}
-<article id="post">
-    <header>
-        <h1><a id="home-post-header" href="{{ post.url }}">{{ post.title }}</a></h1>
-    </header>
-    {{ post.excerpt }}
-    <br>
-    <h4 class="text-center"><a class="sakura-fade no-border" href="{{post.url}}">Continue reading.. &raquo;</a></h4>
-    {% comment %} <h4 class="text-center"><a class="no-border fancy-font" href="/wisdom">View all posts...</a></h4> {% endcomment %}
-</article>
+<h3>5 most recent articles</h3>
+<div>
+    <ul>
+    {% for post in site.posts limit: 5 %}
+        {% if post.best %}
+            {% assign best_exists = true %}
+        {% endif %}
+        <li style="padding-bottom:7px;">
+            <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+
+{% if best_exists %}
+<h3>best articles</h3>
+{% for post in site.posts %}
+<ul>
+    {% if post.best %}
+    <li style="padding-bottom:7px;">
+        <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
+    </li>
+    {% endif %}
+</ul>
+{% endfor %}
+{% endif %}

@@ -6,6 +6,27 @@ body {
     padding-top: 20px;
     font-family: Merriweather, Helvetica, Arial, sans-serif;
     background-color: rgba(0,0,0,0.0);
+    max-width: 800px;
+}
+
+.site-title {
+    font-size: 1.75em;
+    margin-bottom: 0px;
+}
+
+.site-title a:hover {
+    text-decoration: none;
+    border: 0px;
+    font-style: italic;
+}
+
+.site-header .meta {
+    margin-top: 0px;
+}
+
+.site-main {
+    max-width: 684px;
+    margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,13 +37,8 @@ a {
     border-bottom: 1px solid #4a4a4a;
 }
 
-@font-face {
-    font-family: fancyRoman;
-    src: url('../fonts/Roman_SD.ttf');
-}
-
 .fancy-font {
-    font-family: fancyRoman;
+    font-family: Courier New, Courier, monospace;
 }
 
 .pull-right {
