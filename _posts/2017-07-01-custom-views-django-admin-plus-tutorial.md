@@ -55,7 +55,7 @@ replace `django.contrib.admin` with
 `django.contrib.admin.apps.SimpleAdminConfig` and add these
 lines to the main `urls.py` file:
 
-```python3
+```python
 from adminplus.sites import AdminSitePlus
 
 admin.site = AdminSitePlus()
@@ -77,7 +77,7 @@ admin).
 Now lets head on to an `admin.py` file of any of your django
 apps and create this custom view.
 
-```python3
+```python
 @admin.site.register_view('hello', urlname='custom_hello', name='Greets you with a hello')
 def custom_hello(request):
     return render(request, 'myapp/hello.html', {})
@@ -87,7 +87,7 @@ Note `register_view` instead of `register`.
 
 We can also use a class based view:
 
-```python3
+```python
 class CustomHelloView(View):
     def get(self, request):
         return render(request, 'myapp/hello.html', {})
@@ -146,7 +146,7 @@ For the admin base site to render properly (i.e. for the
 we need to pass it some context which can be done in our views
 using a helper function provided by django:
 
-```python3
+```python
 @admin.site.register_view('hello', urlname='custom_hello', name='Greets you with a hello')
 def custom_hello(request):
     context = dict(
