@@ -7,7 +7,6 @@ layout: default
     <ul>
     {% for post in site.posts limit: 5 %}
         {% if post.best %}
-            {% assign best_exists = true %}
         {% endif %}
         <li style="padding-bottom:7px;">
             <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
@@ -16,16 +15,17 @@ layout: default
     </ul>
 </div>
 
-
-{% if best_exists %}
 <h3>best articles</h3>
 {% for post in site.posts %}
 <ul>
     {% if post.best %}
+      {% assign best_exists = true %}
     <li style="padding-bottom:7px;">
         <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
     </li>
     {% endif %}
 </ul>
 {% endfor %}
+{% if best_exists != true %}
+  <p> <em>No best articles found. Perhaps the author needs to up his blog game ;) </em></p>
 {% endif %}
