@@ -1,12 +1,12 @@
 html {
-    background-image: url('../img/background.png')
+    /*background-image: url('../img/background.png')*/
 }
 
 body { 
     padding-top: 20px;
     font-family: Merriweather, Helvetica, Arial, sans-serif;
     background-color: rgba(0,0,0,0.0);
-    max-width: 800px;
+    max-width: 840px;
 }
 
 .site-title {
@@ -25,7 +25,8 @@ body {
 }
 
 .site-main {
-    max-width: 684px;
+    line-height: 1.75;
+    max-width: 720px;
     margin: auto;
 }
 
