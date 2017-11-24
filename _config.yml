@@ -42,7 +42,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "oxalorg" # Set this to default author
+      author: "oxalorg" # set this to default author
+  -
+    scope:
+      path: "_drafts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "oxalorg" # set this to default author
 
 
 # Third-party services
