@@ -13,9 +13,10 @@ layout: default
         </li>
     {% endfor %}
     </ul>
+    <a href="/blog" class="button">View all {{ site.posts | size }} articles »</a>
 </div>
 
-<h3>best articles</h3>
+<h3>most popular articles</h3>
 {% for post in site.posts %}
 <ul>
     {% if post.best %}
@@ -27,5 +28,5 @@ layout: default
 </ul>
 {% endfor %}
 {% if best_exists != true %}
-  <p> <em>No best articles found. Perhaps the author needs to up his blog game ;) </em></p>
+  <p> <em>No popular articles found. Perhaps the author needs to up his blog game ;) </em></p>
 {% endif %}
