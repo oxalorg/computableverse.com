@@ -9,7 +9,8 @@ layout: default
         {% if post.best %}
         {% endif %}
         <li style="padding-bottom:7px;">
-            <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
+          <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a>
+          <small><em><span class="sakura-blossom inline-block js-daysago" data-date="{{ post.date }}"> - {{ post.date | date: '%d %b' }}</span></em></small>
         </li>
     {% endfor %}
     </ul>
@@ -22,7 +23,8 @@ layout: default
     {% if post.best %}
       {% assign best_exists = true %}
     <li style="padding-bottom:7px;">
-        <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> - {{ post.date | date: '%d %b' }}</span></em></small>
+      <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a>
+      <small><em><span class="sakura-blossom inline-block js-daysago" data-date="{{ post.date }}"> - {{ post.date | date: '%d %b' }}</span></em></small>
     </li>
     {% endif %}
 </ul>
@@ -30,3 +32,4 @@ layout: default
 {% if best_exists != true %}
   <p> <em>No popular articles found. Perhaps the author needs to up his blog game ;) </em></p>
 {% endif %}
+

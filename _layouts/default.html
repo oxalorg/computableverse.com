@@ -44,6 +44,30 @@
         <li><small><a class="fancy-font sakura-fade no-border" href="{{ site.baseurl }}/feed.xml">rss</a></small></li>
       </ul>
     </footer>
+    <script>
+      var getDaysAgo = function (postDate) {
+        var today = new Date();
+        var createdOn = new Date(postDate);
+        var msInDay = 24 * 60 * 60 * 1000;
+
+        createdOn.setHours(0,0,0,0);
+        today.setHours(0,0,0,0);
+
+        var diff = (+today - +createdOn)/msInDay;
+        return diff;
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var $dateElems = document.querySelectorAll('.js-daysago');
+        for(var i = 0; i < $dateElems.length; i++) {
+          $elem = $dateElems[i];
+          var daysAgo = getDaysAgo($elem.getAttribute('data-date').split(' ')[0]);
+          if (daysAgo < 165) {
+            $elem.innerHTML = ' - ' + daysAgo + ' days ago';
+          }
+        }
+      });
+    </script>
     {% include analytics.html %}
 </body>
 </html>
