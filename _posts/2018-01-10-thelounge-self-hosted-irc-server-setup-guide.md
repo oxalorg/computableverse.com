@@ -59,7 +59,8 @@ StartLimitInterval=60s
 StartLimitBurst=3
 
 [Install]
-WantedBy=default.target```
+WantedBy=default.target
+```
 
 Now simply run: 
 
