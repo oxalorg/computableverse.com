@@ -1,5 +1,5 @@
 ---
-title: TheLounge: self-hosted IRC server setup guide
+title: "TheLounge: self-hosted IRC server setup guide"
 date: 2018-01-10
 slug: thelounge-self-hosted-irc-server-setup-guide
 ---
