@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ComputableVerse
-email: mitesh@oxal.org
+email: mitesh@miteshshah.com
 description: > # this means to ignore newlines until "baseurl:"
   "A collection of the problems I face related to software and the computable multi-verse."
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -42,14 +42,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "oxalorg" # set this to default author
+      author: "Mitesh Shah" # set this to default author
   -
     scope:
       path: "_drafts"
       type: "posts"
     values:
       layout: "post"
-      author: "oxalorg" # set this to default author
+      author: "Mitesh Shah" # set this to default author
 
 
 # Third-party services
@@ -69,7 +69,7 @@ social:
 # Includes an icon in the 'ABOUT' page for each username you enter
 footer-links:
   dribbble:
-  email: mitesh@oxal.org
+  email: mitesh@miteshshah.com
   facebook:
   flickr:
   github: oxalorg
@@ -78,7 +78,7 @@ footer-links:
   pinterest:
   rss: True # just type anything here for a working RSS icon
   twitter: oxalorg
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: "users/4395646/oxalorg" # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
