@@ -45,15 +45,21 @@ Copy the following contents into `/etc/systemd/system/lounge.service`:
 
 ```
 [Unit]
-Description=TheLounge IRC Server
+Description=The Lounge IRC client
+After=thelounge.service
 
 [Service]
-ExecStart=/usr/bin/lounge
+Type=simple
+ExecStart=/usr/bin/lounge start
+User=mitesh #your username here
+Group=mitesh
 Restart=always
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
 
 [Install]
-WantedBy=multi-user.target
-```
+WantedBy=default.target```
 
 Now simply run: 
 
